@@ -1,0 +1,3 @@
+INSTALL_PACKAGE_COMMAND='sudo dnf -y install '
+UPDATE_PACKAGES='sudo dnf check-update'
+UPGRADE_PCKAGES='sudo dnf upgrade'

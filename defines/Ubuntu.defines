@@ -1,0 +1,3 @@
+INSTALL_PACKAGE_COMMAND='sudo apt -y install '
+UPDATE_PACKAGES='sudo apt update'
+UPGRADE_PCKAGES='sudo apt upgrade'

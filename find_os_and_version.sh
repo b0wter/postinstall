@@ -51,11 +51,26 @@ function setOsAndVersion() {
         ;;
     esac
 
-    echo "Running post-install script on $OS $VERSION ($ARCH)."
+    #
+    # --- Find Hostname ---
+    #
+    HOSTNAME=$(hostname -s)
+
+    echo "Probing finished: $HOSTNAME is running $OS $VERSION ($ARCH)."
+}
+
+# tests if the OS variable has been set and exits the script if it is not
+#
+function testOsHasBeenSet(){
+    if [[ -z "$OS//" ]];
+    then
+        echo "OS not set, cannot set defines."
+        exit 1
+    fi
 }
 
 function displayArchitectureHint() {
-    if [[ ($ARCH != "x64") && ($ARCH != "x86") ]]
+    if [[ ($ARCH != "x64") && ($ARCH != "x86") ]];
     then
         echo "This script is only tested on x64 and x86 installs."
     fi
