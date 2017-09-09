@@ -56,6 +56,13 @@ function setOsAndVersion() {
     #
     HOSTNAME=$(hostname -s)
 
+    if [[ $HOSTNAME == "localhost" ]];
+    then
+        echo "The hostname is not set properly (it's localhost). Please enter the name of this machine:"
+        read HOSTNAME
+        sudo hostname $HOSTNAME
+    fi
+
     echo "Probing finished: $HOSTNAME is running $OS $VERSION ($ARCH)."
 }
 

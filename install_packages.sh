@@ -8,6 +8,7 @@ BASE_PACKAGE_FILENAME="packages.txt"
 #
 function installAdditionalRepositories(){
 	. "$DIR/packages/$OS_repositories.sh"
+	installAdditionallySourceRepositories
 }
 
 function installPackages() {
