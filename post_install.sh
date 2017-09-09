@@ -27,5 +27,6 @@ sourceOsSpecificDefines $OS
 
 # Installation/configuration
 #
+installAdditionalRepositories
 installPackages
 #extractSshArchive
