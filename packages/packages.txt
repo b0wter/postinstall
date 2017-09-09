@@ -1,4 +1,6 @@
 git
-vim
 gnupg
 htop
+nmap
+gpg
+tig
